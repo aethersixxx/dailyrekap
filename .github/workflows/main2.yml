@@ -3,11 +3,13 @@ name: Daily Rekap Cuaca Polymarket
 on:
   schedule:
     - cron: '0 23 * * *'   # 23:00 UTC = 06:00 WIB
-  workflow_dispatch:       # bisa test manual
+  workflow_dispatch:
 
 jobs:
   run:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # FIX WARNING NODE.JS 20
     steps:
       - uses: actions/checkout@v4
       - name: Setup Python
