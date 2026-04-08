@@ -18,7 +18,7 @@ jobs:
         run: pip install requests
       - name: Run script
         env:
-          TELEGRAM_TOKEN: ${{ secrets.8054170482:AAEB4WqoYUkNXt2lz3A3xvPwQ4FDiNyV5KI }}
-          CHAT_ID: ${{ secrets.1226199501 }}
-          OPENWEATHER_API_KEY: ${{ secrets.9b629b666bc571d087d43ed6d17a4e8f }}
+  TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+  CHAT_ID: ${{ secrets.CHAT_ID }}
+  OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
         run: python rekap_cuaca.py
