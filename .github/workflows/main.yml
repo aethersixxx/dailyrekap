@@ -21,4 +21,4 @@ jobs:
   TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
   CHAT_ID: ${{ secrets.CHAT_ID }}
   OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
-        run: python rekap_cuaca.py
+        run: python rekapcuaca.py
