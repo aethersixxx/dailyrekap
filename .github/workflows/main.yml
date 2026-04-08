@@ -1,0 +1,24 @@
+name: Daily Rekap Cuaca Polymarket
+
+on:
+  schedule:
+    - cron: '0 23 * * *'   # 23:00 UTC = 06:00 WIB
+  workflow_dispatch:       # bisa test manual
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Run script
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.8054170482:AAEB4WqoYUkNXt2lz3A3xvPwQ4FDiNyV5KI }}
+          CHAT_ID: ${{ secrets.1226199501 }}
+          OPENWEATHER_API_KEY: ${{ secrets.9b629b666bc571d087d43ed6d17a4e8f }}
+        run: python rekap_cuaca.py
